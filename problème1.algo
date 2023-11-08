@@ -17,27 +17,29 @@ k:=0;
 
 BEGIN
 
+// l'utilisateur est prié de saisir les elements 
+
    Write("Entrez le nombre de d'élément du premier ensemble");
    Read(k);
-   IF k <1
+
 		FOR i FROM 0 TO k-1 STEP 1 DO
 		Write("Entrez l'élément " i+1);
 		Read(tab1[i]);
 
 		END_FOR
-	ELSE 
+
 
 
    Write("Entrez le nombre de chiffre du second ensemble");
    Read(k);
-   FOR i FROM 0 TO k-1 STEP 1 DO
-   Write("Entrez l'élément " i+1);
-   Read(tab2[i]);
+		FOR i FROM 0 TO k-1 STEP 1 DO
+		Write("Entrez l'élément " i+1);
+		Read(tab2[i]);
 
    END_FOR
 
  
-   // parcours du  premier tableau et comparaison des éléments aux éléments du second tableau
+   // parcours du  premier tableau et comparaison de ses  éléments aux éléments du second tableau
 
        FOR i FROM 0 TO tab1.length-1 STEP 1 DO
 			tp:=tab1[i];
