@@ -1,6 +1,6 @@
 # STRUCTURE-DE-DONNEE
 
-Dans ce check nous avons 2 problèmes à résourdre. Nous avons donc prevu le faire en des fichiers separé
+Dans ce checkpoint nous avons 2 problèmes à résourdre. Nous avons donc prevu le faire en des fichiers separés
 le fichier problème1.algo traite le problème 1 entièrement
 
 dans ce problème 1
@@ -9,19 +9,19 @@ il nous est demandé de trouvez la somme de tous les éléments présents dans l
 c'est à dire des éléments distincts qui ne doivent pas se trouver dans les 2 ensembles à la fois
 
 pour résourdre nous allons utiliser 2 tableaux differents qui vont recevoir chacun un ensemble. les éléments de chaque ensemble sont des entiers
-nous allons utiliser les entiers i et j comme des compteur pour parcourir les tableau
+nous allons utiliser les entiers i et j comme des compteur pour parcourir les tableaux
 nous allons utiliser la variable tp comme variable tampon qui va recevoir les éléments d'un tableau qui seront comparés à tour de role à tous les éléments du second tableau
 
 nous allons demander à l'utilsateur de definir pour chaque ensemble le nombre d'élément ce nombre sera affecté à la variable k qui permettra de 
 determiner la fin du parcours de chaque tableau
 
-une fois que les tableau ont été dimensionné et rempli par l'utilisateur nous commencons donc la vérification proprement dite
+une fois que les tableau ont été dimensionnés et rempli par l'utilisateur nous commençons donc la vérification proprement dite
 pour le faire nous parcourons le premier tableau grace au compteur i et pour chaque élément que nous prenons et affectons à la variable tampon nous comparons cet element à tous les autres éléments du second tableau en le parcourant également grace au compteur j
 
 Si pendant le parcours du second tableau nous trouvons une égalité d'élement nous arretons et nous passons à l'élément suivant du premier tableau
 sinon nous parcourons entièrement le second tableau et si nous ne trouvons pas d'égalité nous aditionnons ce élément à somme totale. et ce jusqu'a parcourir entièrement le premier tableau
 
-une fois le premier tableau parcouru nous inversons les tableau et cette fois nous comparons les éléments de second tableau aux éléments du premier en suivant la même demarche.  
+une fois le premier tableau parcouru nous inversons les tableau(ve debiyn) et cette fois nous comparons les éléments de second tableau aux éléments du premier en suivant la même demarche.  
 
 a la fin nous avons la somme de tous les éléments distincts dans la variable som
 
