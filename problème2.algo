@@ -33,11 +33,6 @@ BEGIN
 
 END
 
-//declaration des variables 
-VAR
-i, j ps,n : INTEGER
-v1 ARRAY_OF INTEGER[n];
-v2 ARRAY_OF INTEGER[n];
 
 
 BEGIN
@@ -56,7 +51,9 @@ FOR i FROM 0 TO n-1 STEP 1 DO
     Read(v1[i]);
 END_FOR
 
-dot_product(v1[n],v2[n], n);
+    //passage de parametres par reference à la procedure
+
+dot_product( VAR v1[n],v2[n], n);
 
 ps:=ps;
 IF(ps=0) THEN 
