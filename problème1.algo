@@ -1,0 +1,74 @@
+
+ALGORITHM SOMME
+
+//declaration des variables 
+
+VAR
+tab1, tab2, :  ARRAY_OF INTEGER[10];
+i, j, k, , tp, som : INTEGER;
+
+
+//initialisation des variables
+i:=0;
+j:=0;
+som:=0;
+k:=0;
+
+
+BEGIN
+
+   Write("Entrez le nombre de d'élément du premier ensemble");
+   Read(k);
+   IF k <1
+		FOR i FROM 0 TO k-1 STEP 1 DO
+		Write("Entrez l'élément " i+1);
+		Read(tab1[i]);
+
+		END_FOR
+	ELSE 
+
+
+   Write("Entrez le nombre de chiffre du second ensemble");
+   Read(k);
+   FOR i FROM 0 TO k-1 STEP 1 DO
+   Write("Entrez l'élément " i+1);
+   Read(tab2[i]);
+
+   END_FOR
+
+ 
+   // parcours du  premier tableau et comparaison des éléments aux éléments du second tableau
+
+       FOR i FROM 0 TO tab1.length-1 STEP 1 DO
+			tp:=tab1[i];
+			FOR j FROM 0 TO tab2.length-1 STEP 1 DO
+				IF (tab2[j] = tp) THEN
+					BREAK; // 2 éléments identiques qui ne repondent pas à notre besoin
+				ELSE
+					j := j+1; // incrementation du compteur pour continuer à parcourir le second tableau
+				END_IF
+	   		END_FOR
+			IF (j = tab2.length) THEN  // Nous avons parcouru tout le tableau 2
+				som := som+tp; // on ajout l'élément distinct à la somme 
+			END_IF
+		END_FOR
+
+		FOR i FROM 0 TO tab2.length-1 STEP 1 DO
+			tp:=tab2[i];
+			FOR j FROM 0 TO tab1.length-1 STEP 1 DO
+				IF (tab1[j] = tp) THEN
+					BREAK; // 2 éléments identiques qui ne repondent pas à notre besoin
+				ELSE
+					j := j+1; // incrementation du compteur pour continuer à parcourir le second tableau
+				END_IF
+	   		END_FOR
+			IF (j = tab1.length) THEN  // Nous avons parcouru tout le tableau 1
+				som := som+tp; // on ajout l'élément distinct à la somme 
+			END_IF
+		END_FOR
+
+      
+           Write("la somme des nombres distincts des 2 tableau est" som);
+      
+  
+END
